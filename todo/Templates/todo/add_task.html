@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 36px;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form input, .form textarea {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .form input[type="submit"] {
+            background-color: #1e3a8a;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #3b82f6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1e3a8a;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #3b82f6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d81b60;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .btn-back:hover {
+            background-color: #e91e63;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Add a New Task</h1>
+    <form method="POST" class="form" id="taskForm">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn" value="Add Task">
+    </form>
+    <a href="{% url 'task_list' %}" class="btn-back">Back to Task List</a>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

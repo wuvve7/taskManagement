@@ -1,0 +1,115 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6; /* Light grey background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Style for the Form */
+.container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title {
+    text-align: center;
+    font-size: 36px;
+    color: #1e3a8a; /* Blue color for title */
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields and Textarea Styling */
+.form input, .form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+.form input[type="submit"] {
+    background-color: #1e3a8a; /* Blue color */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #3b82f6; /* Hover effect with light blue */
+}
+
+/* Button Styling for Links */
+.btn, .btn-add-task, .btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1e3a8a; /* Blue color */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn:hover, .btn-add-task:hover, .btn-back:hover {
+    background-color: #3b82f6; /* Hover effect with light blue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Back Button Styling */
+.btn-back {
+    background-color: #d81b60; /* Red color for "Back" button */
+    margin-top: 30px;
+}
+
+.btn-back:hover {
+    background-color: #e91e63; /* Darker red when hovered */
+}
+
+/* Task List Styling */
+ul.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.task-list .task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul.task-list .task-item a {
+    background-color: #d81b60; /* Red color for delete button */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+ul.task-list .task-item a:hover {
+    background-color: #e91e63;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
